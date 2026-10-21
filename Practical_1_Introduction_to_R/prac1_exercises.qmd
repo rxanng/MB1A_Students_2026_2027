@@ -1,0 +1,73 @@
+---
+title: "Practical 1 Introduction to R"
+author: "Ryan Ng"
+---
+I am learning about functions, and practicing using them by using the round() function, which rounds a number to, by default, the nearest whole number
+```{r}
+round(3.14159)
+```
+Arguments cane control the behaviour of a function, and they need not be numbers. Some functions take arguments which may either be specified by the user, or, if left, out, take on a default value. If I want the round() function to round a number off to 2 decimal places, I have to include that argument. 
+```{r}
+round(3.14159, digits=2)
+```
+
+Ordering arguments can be done by giving them in the correct order, or explicitly naming them. For example, the seq() function has the typical implicit order of 'from', followed 'by', followed by 'to'. Without writing these down, the function takes the numbers listed in this order. However, I can also write the names in explicitly, should I not want to put the numbers in that order.
+
+Method 1:
+print(seq(1, 10, 2))
+
+Method 2:
+print(seq(by = 2, from = 1, to = 10))
+
+Using rep() to practice:
+```{r}
+print(rep(5,7))
+print(rep(times=7,x=5))
+```
+
+Using the tab key after opening the bracket allows you to see the list of argumenbts available - so you do not need to remember the exact name of the argument
+
+Practice:
+Creating character, numerical and logical variables, printing them, and checking their classes
+```{r}
+Voyager<-6
+Ohio<-"West of"
+Peacemaker<-TRUE
+print(Voyager)
+print(Ohio)
+print(Peacemaker)
+print(class(Voyager))
+print(class(Ohio))
+print(class(Peacemaker))
+```
+**Exercise - Using variables of different types**
+
+You have conducted an experiment in which you have treated one batch of cells with radiation and kept the other as a control, then counted the number of live cells before and after.
+
+The attributes of your two batches of cells are in this table:
+
+cell_ID	treated	num_cells_before	num_cells_after
+CX1	TRUE	5415	1432
+CX2	FALSE	8123	7543
+In your prac1_exercises.qmd Quarto document, create eight variables of appropriate types which together contain all of the information in the table.
+
+Answer
+```{r}
+Cell1<-"CX1"
+Cell2<-"CX2"
+Radiation<-TRUE
+Control<-FALSE
+Cell1Before<-5415
+Cell1After<-1432
+Cell2Before<-8123
+Cell2After<-7543
+print(Cell1)
+print(Cell2)
+print(Radiation)
+print(Control)
+print(Cell1Before)
+print(Cell1After)
+print(Cell2Before)
+print(Cell2After)
+```
+

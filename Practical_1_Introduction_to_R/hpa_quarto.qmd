@@ -1,0 +1,22 @@
+---
+title: "Brain Summary (Analysis in Quarto Exercise)"
+author: "Ryan Ng"
+---
+Genes are classed as *regionally elevated* if they show distinctly higher expression in a given region than in the rest of the brain. I am calculating the total number of genes with regionally elevated expression in the **forebrain** - that is, the cerebral cortex, basal ganglia, thalamus and hypothalamus - regions in human, pig and mouse (in that order). 
+
+In each of the calculations below, the first number is with reference to the cerebral cortex, followed by the basal ganlia (second number), then thalamus (third number), and finally hypothalamus (last number)
+
+```{r}
+# This code calculates the sum in humans
+humans <- sum(180, 83, 57, 110)
+# This code calculates the sum in pig
+pig <- sum(109, 157, 31, 45)
+# This code calculates the sum in mouse
+mouse <- sum(55, 185, 60, 98)
+
+print(humans)
+print(pig)
+print(mouse)
+```
+
+Humans have the highest number of genes with regionally elevated expression, with 430 genes compared to 342 in pigs and 398 in mouse.
