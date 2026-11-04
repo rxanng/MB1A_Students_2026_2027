@@ -1,0 +1,12 @@
+---
+title: "prac2_exercises"
+---
+
+```{r}
+y<-12
+print(y==7)
+print(y<15)
+print(y>20)
+print(y<=12)
+```
+
