@@ -1,0 +1,35 @@
+---
+title: "Practical_1_Introduction_to_R/ukhsa_data_analysis"
+---
+```{r}
+library(tidyverse)
+library(gt)
+```
+
+```{r}
+glycopeptides<-read_csv("ukhsa-chart-download.csv")
+gt(head(glycopeptides))
+```
+```{r}
+weather <- read_csv("data/weather_data.csv")
+ggplot(weather,aes(
+  x=observation_time,
+  y=temperature_c
+)) +
+  geom_line(colour="burlywood4") +
+  xlab("Date")+
+  ylab("Temp(C)")+
+  ggtitle("Temperature by Date")
+```
+
+```{r}
+ggplot(glycopeptides,aes(
+  x=date,
+  y=metric_value
+))+
+  geom_line(colour="skyblue")+
+  xlab("Date")+
+  ylab("No. of Bacteraemia")+
+  ggtitle("No. of Bacteraemia tested each month")
+```
+

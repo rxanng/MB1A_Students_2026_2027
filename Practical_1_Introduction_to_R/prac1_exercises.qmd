@@ -70,4 +70,34 @@ print(Cell1After)
 print(Cell2Before)
 print(Cell2After)
 ```
+```{r}
+library(tidyverse)
+library(gt)
+```
+
+```{r}
+cell_ID<-c(Cell1,Cell2)
+treated<-c(Radiation,Control)
+num_cells_before<-c(Cell1Before,Cell2Before)
+num_cells_after<-c(Cell1After,Cell2After)
+```
+
+```{r}
+all_my_pets <- c("dog", "horse", "guinea pig", "chicken", "cat")
+nicefood<-all_my_pets[4]
+print(nicefood)
+```
+```{r}
+data_frame<-tibble(
+  cell=cell_ID,
+  treated=treated,
+  before=num_cells_before,
+  after=num_cells_after
+)
+gt(data_frame)
+```
+```{r}
+weather <- read_csv("data/weather_data.csv")
+gt(weather)
+```
 
